@@ -1,7 +1,7 @@
 package com.example.kotlinprojecttest2
 
 
-import com.example.kotlinprojecttest2.data.remote.quest.GetJsonResponse
+import com.example.kotlinprojecttest2.data.remote.quest.GetVKJsonResponse
 import com.example.kotlinprojecttest2.data.remote.quest.QuestApi
 
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -46,7 +46,7 @@ class vkParse() {
             })
         )}
 
-    fun findUrls(res : GetJsonResponse) {
+    fun findUrls(res : GetVKJsonResponse) {
         res.resp?.items?.forEach {
             if(it.marked_as_ads==0){
                 val inter_list : MutableList<String> = ArrayList()

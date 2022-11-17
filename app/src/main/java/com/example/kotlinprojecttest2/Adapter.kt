@@ -4,6 +4,8 @@ package com.example.kotlinprojecttest2
 /*
 import android.content.Context
 import android.content.Intent
+import android.icu.number.NumberFormatter.with
+import android.icu.number.NumberRangeFormatter.with
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -33,9 +35,9 @@ class Adapter(var context: Context, arraylist: vkParse) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val imageUrl: String  = this.arraylist[position + 1]
+        val arraylist: MutableList<String> = this.arraylist[position + 1]
         val url: String = a.getUrl()
-        Picasso.with(context).load(imageUrl).into(holder.imageView)
+        Picasso.with(context).load(this.arraylist[position][0]).into(holder.imageView)
         holder.Title.setText("Мемы лицея 1523")
         holder.author.setText(imageUrl)
         holder.tvDate.setText("\u2022" + dateTime(a.getPublishedAt()))
@@ -93,5 +95,6 @@ class Adapter(var context: Context, arraylist: vkParse) :
 
 
 }
+
 
  */
